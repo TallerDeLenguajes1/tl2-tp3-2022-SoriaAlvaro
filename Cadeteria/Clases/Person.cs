@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Class_Base;
-
+using Class_MethodD;
 namespace Class_Person
 {
     public class Person : Base
