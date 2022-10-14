@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Class_Base;
-using Class_MethodD;
+using Class_MethodExtra;
 namespace Class_Person
 {
     public class Person : Base
@@ -20,6 +20,13 @@ namespace Class_Person
             System.Console.WriteLine($"Nombre: {Name}");
             System.Console.WriteLine($"Tel: {Phone}");
             System.Console.WriteLine($"Dirección: {Address}");
+        }
+        public void setData(Person person, int id)
+        {
+            person.Id = id + 1;
+            person.Name = Extra.setString("Nombre:");
+            person.Address = Extra.setString("Dirección:");
+            person.Phone = Extra.setInt("Tel:");
         }
     }
 }

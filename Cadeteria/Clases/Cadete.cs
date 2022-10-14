@@ -9,7 +9,7 @@ namespace Class_Cadete
 {
     public class Cadete : Person
     {
-        private List<Pedidos>? _listPedidos;
+        private List<Pedidos>? _listPedidos = new List<Pedidos>();
         private double jornal = 300;
 
         public List<Pedidos>? ListPedidos { get => _listPedidos; set => _listPedidos = value; }
@@ -19,6 +19,11 @@ namespace Class_Cadete
             int cantPedidos = ListPedidos.Count();
 
             return cantPedidos * jornal;
+        }
+
+        public void asignarPedido(Cadete? cadete, Pedidos? pedido)
+        {
+            cadete.ListPedidos.Add(pedido);
         }
     }
 } 

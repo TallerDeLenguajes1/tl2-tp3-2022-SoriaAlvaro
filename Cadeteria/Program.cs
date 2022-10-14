@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Class_Cliente;
+using Class_Pedidos;
 
-int nn(int n){
-    n++;
-    return n;
+var p = new Pedidos();
+var listaPedidos = new List<Pedidos>();
+
+listaPedidos = p.AltaPedidos();
+
+foreach(var lp in listaPedidos)
+{
+    lp.displayP();
+    System.Console.WriteLine("\n");
 }
 
-
-int m = nn(2);
